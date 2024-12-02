@@ -1,4 +1,6 @@
 import { ServiceCard } from "@/components/ServiceCard";
+import { TextSlideIn } from "@/components/TextSlideIn";
+import { TextZoomSection } from "@/components/TextZoomSection";
 import React from "react";
 
 interface ClientLogoProps {
@@ -63,11 +65,16 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="flex justify-center	items-center p-16 gap-8 h-screen">
+      <section
+        className="flex justify-center	items-center p-16 gap-8 "
+        style={{
+          minHeight: "100vh",
+        }}
+      >
         <div className="flex flex-col gap-8 items-center text-center">
           <h1 className="text-7xl ">
-            Bridging creativity and technology <br />
-            through design and engineering
+            <TextSlideIn text="Bridging creativity and technology " />
+            <TextSlideIn text="through design and engineering" />
           </h1>
           <p className="text-lg text-gray-300">
             Hashtensor is a studio that transforms ideas into products.
@@ -83,9 +90,24 @@ export default function Home() {
         </div>
       </section>
 
+      <TextZoomSection />
+
       {/* Services Section */}
-      <section className="flex flex-col justify-center items-center py-16 h-screen">
-        <h2 className="text-4xl font-thin mb-8 text-gray-300">01</h2>
+      <section
+        className="flex flex-col justify-center items-center py-16"
+        style={{
+          minHeight: "100vh",
+        }}
+      >
+        <div>
+          <h2 className="text-center text-lg tracking-widest text-gray-400 mb-4">
+            Our Expertise, Your Success.
+          </h2>
+          <h1 className="text-center text-6xl mb-24">
+            <TextSlideIn text="We specialize in transforming ideas into" />
+            <TextSlideIn text="impactful digital experiences." />
+          </h1>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
           <ServiceCard
             title="Digital marketing"
@@ -121,11 +143,22 @@ export default function Home() {
       </section>
 
       {/* Clients Section */}
-      <section className="flex flex-col justify-center items-center py-16 h-screen">
-        <h2 className="text-4xl font-thin mb-8 text-gray-300">02</h2>
-        <p className="text-6xl mb-8 text-center">
-          We are behind some of the fastest growing products
-        </p>
+      <section
+        className="flex flex-col justify-center items-center py-16"
+        style={{
+          minHeight: "100vh",
+        }}
+      >
+        <div>
+          <h2 className="text-center text-lg tracking-widest text-gray-400 mb-4">
+            We Collaborate with the Best
+          </h2>
+          <h1 className="text-center text-6xl mb-24">
+            <TextSlideIn text="Proudly partnering with some of the" />
+            <TextSlideIn text="fastest-growing products and startups" />
+            <TextSlideIn text="in the industry." />
+          </h1>
+        </div>
         <div className="flex flex-wrap justify-center space-x-6">
           <ClientLogo name="Cider" />
           <ClientLogo name="Minimax" />
