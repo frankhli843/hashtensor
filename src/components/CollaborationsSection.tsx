@@ -55,69 +55,79 @@ export const CollaborationsSection = () => {
 
   return (
     <div
-      ref={containerRef}
       style={{
+        marginTop: "-160vh",
         width: "100%",
         height: "200vh",
-        marginTop: "-160vh",
-        position: "relative",
-        overflow: "hidden",
+        overflow: "clip",
       }}
     >
       <div
-        ref={contentRef}
-        className="flex flex-col justify-center items-center"
+        ref={containerRef}
         style={{
           width: "100%",
-          height: "100vh",
+          height: "200vh",
+          position: "absolute",
         }}
       >
-        <canvas
-          ref={canvasRef}
+        <div
+          ref={contentRef}
+          className="flex flex-col justify-center items-center"
           style={{
-            position: "absolute",
             width: "100%",
             height: "100vh",
-          }}
-        />
-        <div
-          ref={backdropRef}
-          style={{
-            position: "absolute",
-            bottom: "0",
-            left: "0",
-            width: "100%",
-            height: "50%",
-            background: "linear-gradient(0deg, #0D1E60 0%, transparent 100%)",
-          }}
-        />
-        <div
-          ref={textRef}
-          className="container"
-          style={{
-            zIndex: 10,
+            top: "0",
+            transform: "translateZ(0)",
+            position: "sticky",
           }}
         >
-          <h1 className="text-4xl text-white font-light text-center">
-            We Collaborate with the Best
-          </h1>
-          <p className="text-white text-7xl uppercase mt-8 font-semibold text-center">
-            partnering with some of the fastest-growing products and startups
-          </p>
-          <div className="w-full flex justify-center items-center mt-16">
-            <div
-              className="p-2 pl-4 bg-white w-full flex justify-between items-center"
-              style={{
-                maxWidth: "472px",
-                borderRadius: "48px",
-              }}
-            >
-              <span className="font-medium">
-                Have any questions for us? Let’s talk!
-              </span>
-              <button className="bg-primary text-white rounded-full py-2 px-4">
-                Schedule a call
-              </button>
+          <canvas
+            ref={canvasRef}
+            style={{
+              position: "absolute",
+              width: "100%",
+              height: "100vh",
+            }}
+          />
+          <div
+            ref={backdropRef}
+            style={{
+              position: "absolute",
+              bottom: "0",
+              left: "0",
+              width: "100%",
+              height: "50%",
+              background: "linear-gradient(0deg, #0D1E60 0%, transparent 100%)",
+            }}
+          />
+          <div
+            ref={textRef}
+            className="container"
+            style={{
+              zIndex: 10,
+            }}
+          >
+            <h1 className="text-4xl text-white font-light text-center">
+              We Collaborate with the Best
+            </h1>
+            <p className="text-white text-7xl uppercase mt-8 font-semibold text-center">
+              partnering with some of the fastest-growing products and startups
+            </p>
+            <div className="w-full flex justify-center items-center mt-16">
+              <div
+                className="p-2 pl-4 bg-white w-full flex justify-between items-center"
+                style={{
+                  maxWidth: "472px",
+                  borderRadius: "48px",
+                }}
+              >
+                <span className="font-medium">
+                  Have any questions for us? Let’s talk!
+                </span>
+                <button className="bg-primary text-white rounded-full py-2 px-4">
+                  Schedule a call
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -238,14 +248,11 @@ const BuildAnimation = (
 
   ScrollTrigger.create({
     trigger: containerRef.current,
-    pin: contentRef.current,
     start: "top top",
     end: "bottom bottom",
     animation: timeline,
     scrub: true,
     toggleActions: "play none none reverse",
-    pinType: "fixed",
-    anticipatePin: 1,
   });
 };
 

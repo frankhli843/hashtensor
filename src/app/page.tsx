@@ -15,7 +15,12 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative w-full overflow-x-hidden">
+    <div
+      className="relative w-full"
+      style={{
+        overflowX: "clip",
+      }}
+    >
       <div
         style={{
           position: "fixed",
