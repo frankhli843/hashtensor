@@ -3,7 +3,6 @@
 import React from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { GRAINY_IMAGE } from "@/lib/various";
 
 export const TextZoomSection: React.FC = () => {
   const containerRef = React.useRef<HTMLDivElement>(null);
@@ -28,14 +27,26 @@ export const TextZoomSection: React.FC = () => {
     const timeline = gsap.timeline();
 
     timeline.fromTo(
+      containerRef.current,
+      {
+        autoAlpha: 0,
+      },
+      {
+        autoAlpha: 1,
+        duration: 0.1,
+      },
+      "0.1"
+    );
+
+    timeline.fromTo(
       section1Ref.current,
       {
         y: "100vh",
-        opacity: 0,
+        autoAlpha: 0,
       },
       {
         y: "0vh",
-        opacity: 1,
+        autoAlpha: 1,
       },
       "0"
     );
@@ -171,7 +182,7 @@ export const TextZoomSection: React.FC = () => {
       style={{
         marginTop: "-200vh",
         width: "100%",
-        minHeight: "600vh",
+        minHeight: "700vh",
         position: "relative",
         overflow: "hidden",
         maxWidth: "100vw",

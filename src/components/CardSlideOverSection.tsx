@@ -4,6 +4,7 @@ import React from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { ServiceCard } from "./ServiceCard";
+import { GRAINY_IMAGE } from "@/lib/various";
 
 export const CardSlideOverSection: React.FC = () => {
   const containerRef = React.useRef<HTMLDivElement>(null);
@@ -12,11 +13,7 @@ export const CardSlideOverSection: React.FC = () => {
   const section1Ref = React.useRef<HTMLDivElement>(null);
   const section2Ref = React.useRef<HTMLDivElement>(null);
   const section3Ref = React.useRef<HTMLDivElement>(null);
-
-  const blob1Ref = React.useRef<HTMLDivElement>(null);
-  const blob2Ref = React.useRef<HTMLDivElement>(null);
-  const blob3Ref = React.useRef<HTMLDivElement>(null);
-  const blob4Ref = React.useRef<HTMLDivElement>(null);
+  const section4Ref = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
     if (
@@ -25,10 +22,7 @@ export const CardSlideOverSection: React.FC = () => {
       !section1Ref.current ||
       !section2Ref.current ||
       !section3Ref.current ||
-      !blob1Ref.current ||
-      !blob2Ref.current ||
-      !blob3Ref.current ||
-      !blob4Ref.current
+      !section4Ref.current
     )
       return;
     gsap.registerPlugin(ScrollTrigger);
@@ -38,13 +32,7 @@ export const CardSlideOverSection: React.FC = () => {
     });
 
     timeline.fromTo(
-      [
-        titleSectionRef.current,
-        blob1Ref.current,
-        blob2Ref.current,
-        blob3Ref.current,
-        blob4Ref.current,
-      ],
+      [titleSectionRef.current],
       {
         scale: 0,
         opacity: 0,
@@ -56,16 +44,41 @@ export const CardSlideOverSection: React.FC = () => {
       "0"
     );
     timeline.fromTo(
+      elementContainerRef.current,
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        ease: "power4.inOut",
+      },
+      "0"
+    );
+
+    timeline.fromTo(
+      elementContainerRef.current,
+      {
+        backgroundColor: "#2449E0",
+      },
+      {
+        backgroundColor: "#617EF8",
+        duration: 5.5,
+        ease: "power4.inOut",
+      },
+      "0"
+    );
+
+    timeline.fromTo(
       titleSectionRef.current,
       {
-        y: 0,
         x: 0,
+        z: 0,
         rotateY: 0,
       },
       {
         x: "-100vw",
-        y: -500,
-        rotateY: 30,
+        z: -500,
+        rotateY: -30,
         ease: "power4.in",
       },
       "1"
@@ -74,110 +87,137 @@ export const CardSlideOverSection: React.FC = () => {
     timeline.fromTo(
       section1Ref.current,
       {
-        y: 500,
         x: "100vw",
-        rotateY: -30,
+        z: -500,
+        rotateY: 30,
       },
       {
-        x: "-100vw",
-        y: -500,
-        rotateY: 30,
+        x: "0vw",
+        z: 0,
+        rotateY: 0,
+        duration: 1,
       },
       "1.5"
     );
     timeline.fromTo(
-      blob1Ref.current,
+      section1Ref.current,
       {
-        width: 700,
-        height: 700,
-        top: 0,
-        left: -300,
+        x: "0vw",
+        z: 0,
+        rotateY: 0,
       },
       {
-        z: 2,
-        top: 0,
-        left: 0,
-        width: "150vw",
-        height: "150vh",
+        x: "-100vw",
+        z: -500,
+        rotateY: -30,
       },
-      "1.5"
+      "2.5"
     );
 
     timeline.fromTo(
       section2Ref.current,
       {
-        y: 500,
         x: "100vw",
-        rotateY: -30,
+        z: -500,
+        rotateY: 30,
+      },
+      {
+        x: "0vw",
+        z: 0,
+        rotateY: 0,
+        duration: 1,
+      },
+      "2.5"
+    );
+    timeline.fromTo(
+      section2Ref.current,
+      {
+        x: "0vw",
+        z: 0,
+        rotateY: 0,
       },
       {
         x: "-100vw",
-        y: -500,
-        rotateY: 30,
+        z: -500,
+        rotateY: -30,
       },
-      "2"
-    );
-    timeline.fromTo(
-      blob2Ref.current,
-      {
-        width: 600,
-        height: 600,
-        bottom: 0,
-        left: -300,
-      },
-      {
-        z: 2,
-        left: 0,
-        bottom: 0,
-        width: "150vw",
-        height: "150vh",
-      },
-      "2"
+      "3.5"
     );
 
     timeline.fromTo(
       section3Ref.current,
       {
-        y: 500,
         x: "100vw",
-        rotateY: -30,
+        z: -500,
+        rotateY: 30,
+      },
+      {
+        x: "0vw",
+        z: 0,
+        rotateY: 0,
+        duration: 1,
+      },
+      "3.5"
+    );
+    timeline.fromTo(
+      section3Ref.current,
+      {
+        x: "0vw",
+        z: 0,
+        rotateY: 0,
       },
       {
         x: "-100vw",
-        y: -500,
-        rotateY: 30,
+        z: -500,
+        rotateY: -30,
       },
-      "2.5"
-    );
-    timeline.fromTo(
-      blob3Ref.current,
-      {
-        width: 700,
-        height: 700,
-        top: 0,
-        right: -300,
-      },
-      {
-        z: 2,
-        top: 0,
-        right: 0,
-        width: "150vw",
-        height: "150vh",
-      },
-      "2.5"
+      "4.5"
     );
 
     timeline.fromTo(
-      [blob1Ref.current, blob2Ref.current, blob3Ref.current, blob4Ref.current],
+      section4Ref.current,
       {
-        scale: 1,
-        autoAlpha: 1,
+        x: "100vw",
+        z: -500,
+        rotateY: 30,
       },
       {
-        scale: 0,
-        autoAlpha: 0,
+        x: "0vw",
+        z: 0,
+        rotateY: 0,
+        duration: 1,
       },
-      "3"
+      "4.5"
+    );
+    timeline.fromTo(
+      section4Ref.current,
+      {
+        x: "0vw",
+        z: 0,
+        rotateY: 0,
+      },
+      {
+        x: "0vw",
+        z: 0,
+        rotateY: 0,
+        duration: 1,
+      },
+      "5.5"
+    );
+    timeline.fromTo(
+      section4Ref.current,
+      {
+        x: "0vw",
+        z: 0,
+        rotateY: 0,
+      },
+      {
+        x: "0vw",
+        z: 0,
+        rotateY: 0,
+        duration: 1,
+      },
+      "6.5"
     );
 
     ScrollTrigger.create({
@@ -195,11 +235,12 @@ export const CardSlideOverSection: React.FC = () => {
       ref={containerRef}
       style={{
         minHeight: "700vh",
-        marginTop: "-120vh",
+        marginTop: "-150vh",
         position: "relative",
         overflow: "hidden",
         width: "100%",
         height: "300vh",
+        isolation: "isolate",
       }}
     >
       <div
@@ -207,135 +248,57 @@ export const CardSlideOverSection: React.FC = () => {
         style={{
           width: "100%",
           height: "100vh",
+          backgroundImage: `${GRAINY_IMAGE}`,
+          backgroundColor: "blue",
+          backgroundBlendMode: "darken",
+          backgroundSize: "100%",
+          backgroundPosition: "-200% -100%",
         }}
       >
-        <div>
-          <div
-            ref={blob1Ref}
-            style={{
-              position: "absolute",
-              top: 0,
-              left: -300,
-              width: "700px",
-              height: "700px",
-              filter: "blur(100px)",
-            }}
-          >
-            <img
-              loading="lazy"
-              src={"./background-gradient-1.png"}
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                clipPath: `url("#blob1")`,
-              }}
-            />
-          </div>
-          <div
-            ref={blob2Ref}
-            style={{
-              position: "absolute",
-              bottom: 0,
-              left: -100,
-              width: "600px",
-              height: "600px",
-              filter: "blur(100px)",
-            }}
-          >
-            <img
-              loading="lazy"
-              src={"./background-gradient-3.png"}
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                clipPath: `url("#blob3")`,
-              }}
-            />
-          </div>
-
-          <div
-            ref={blob3Ref}
-            style={{
-              position: "absolute",
-              top: 0,
-              right: -300,
-              width: "700px",
-              height: "700px",
-              filter: "blur(100px)",
-            }}
-          >
-            <img
-              loading="lazy"
-              src={"./background-gradient-2.png"}
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                clipPath: `url("#blob4")`,
-              }}
-            />
-          </div>
-          <div
-            ref={blob4Ref}
-            style={{
-              position: "absolute",
-              bottom: 0,
-              right: -100,
-              width: "600px",
-              height: "600px",
-              filter: "blur(100px)",
-            }}
-          >
-            <img
-              loading="lazy"
-              src={"./background-gradient-1.png"}
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                clipPath: `url("#blob3")`,
-              }}
-            />
-          </div>
-        </div>
         <div
           className="flex justify-center items-center"
           style={{
             width: "100%",
             height: "100vh",
-            perspective: "1000px",
+            perspective: "50vw",
             transformStyle: "preserve-3d",
           }}
         >
           <div
-            className="absolute  w-full h-full flex justify-center items-center"
+            className="absolute  w-full h-full flex  items-center"
             ref={titleSectionRef}
           >
-            <div className="relative w-full h-full flex justify-center items-center">
+            <div
+              className="relative w-full flex items-end justify-between p-32"
+              style={{
+                maxWidth: "1580px",
+              }}
+            >
               <h2
-                className="text-center text-8xl tracking-widest container"
+                className=" text-9xl tracking-widest uppercase font-semibold text-white"
                 style={{
                   backfaceVisibility: "hidden",
                   zIndex: 10,
                 }}
               >
-                We specialize in transforming ideas into impactful digital
-                experiences.
+                We <br />
+                Transform <br />
+                Ideas into <br />
+                Impactful <br />
+                Experiences
               </h2>
+              <svg
+                width="122"
+                height="122"
+                viewBox="0 0 122 122"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.7333 0.000166893L0.666626 13.0668L90.2666 102.667H9.99996V121.333H122V9.3335H103.333V89.6002L13.7333 0.000166893Z"
+                  fill="#E6E6FA"
+                />
+              </svg>
             </div>
           </div>
 
@@ -379,6 +342,15 @@ export const CardSlideOverSection: React.FC = () => {
               ]}
               background="url(./background-gradient-2.png)"
             />
+          </div>
+
+          <div className="absolute w-full container" ref={section4Ref}>
+            <div className="flex flex-col w-full items-center justify-center">
+              <h2 className="text-9xl text-white font-semibold uppercase">
+                But that&apos;s <br />
+                not all...
+              </h2>
+            </div>
           </div>
         </div>
       </div>

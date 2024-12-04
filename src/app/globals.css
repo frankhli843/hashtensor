@@ -46,9 +46,18 @@ body::after {
 
     --text-zoom-initial-opacity: 0;
 
+    --hero-line-1-blur: 50px;
+    --hero-line-2-blur: 50px;
+    --hero-line-3-blur: 50px;
+    --hero-line-4-blur: 50px;
+
     --gradient-card-1-blur: 100px;
     --gradient-card-2-blur: 100px;
     --gradient-card-3-blur: 100px;
+
+    --gradient-position-x: 90%;
+    --gradient-position-y: 20%;
+    --gradient-size: 40%;
   }
 
   .dark {
