@@ -42,7 +42,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
           flex: 1,
         }}
       >
-        <h3 className="text-8xl font-semibold mb-2 text-white uppercase">
+        <h3 className="text-9xl font-semibold mb-2 text-white uppercase">
           {title}
         </h3>
         <div className="flex flex-wrap gap-2">

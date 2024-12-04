@@ -72,14 +72,14 @@ export const Header: React.FC = () => {
         <a href="#main" className="px-8 py-3 ">
           Main
         </a>
-        <a href="#showcase" className="px-8 py-3">
-          Showcase
+        <a href="#process" className="px-8 py-3">
+          Process
         </a>
         <a href="#services" className="px-8 py-3 ">
           Services
         </a>
-        <a href="#about" className="px-8 py-3">
-          About us
+        <a href="#showcase" className="px-8 py-3">
+          Showcase
         </a>
       </nav>
       <div ref={buttonRef} style={{ opacity: 0 }}>

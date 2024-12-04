@@ -104,6 +104,22 @@ export const CollaborationsSection = () => {
           <p className="text-white text-7xl uppercase mt-8 font-semibold text-center">
             partnering with some of the fastest-growing products and startups
           </p>
+          <div className="w-full flex justify-center items-center mt-16">
+            <div
+              className="p-2 pl-4 bg-white w-full flex justify-between items-center"
+              style={{
+                maxWidth: "472px",
+                borderRadius: "48px",
+              }}
+            >
+              <span className="font-medium">
+                Have any questions for us? Let’s talk!
+              </span>
+              <button className="bg-primary text-white rounded-full py-2 px-4">
+                Schedule a call
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -194,12 +194,14 @@ export const CardSlideOverSection: React.FC = () => {
       {
         x: "0vw",
         z: 0,
+        opacity: 1,
         rotateY: 0,
       },
       {
         x: "0vw",
         z: 0,
         rotateY: 0,
+        opacity: 0,
         duration: 1,
       },
       "5.5"
@@ -302,7 +304,7 @@ export const CardSlideOverSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="absolute w-full container" ref={section1Ref}>
+          <div className="absolute w-full " ref={section1Ref}>
             <ServiceCard
               title="Digital marketing"
               description="Delivering eye-catching motion graphics and campaigns that earn attention, spark emotion and increase conversions."
@@ -316,7 +318,7 @@ export const CardSlideOverSection: React.FC = () => {
             />
           </div>
 
-          <div className="absolute w-full container" ref={section2Ref}>
+          <div className="absolute w-full " ref={section2Ref}>
             <ServiceCard
               title="Web design & development"
               description="Craft digital experiences that blend beauty and ROI, capturing attention and unlocking revenue with every interaction."
@@ -330,7 +332,7 @@ export const CardSlideOverSection: React.FC = () => {
             />
           </div>
 
-          <div className="absolute w-full container" ref={section3Ref}>
+          <div className="absolute w-full " ref={section3Ref}>
             <ServiceCard
               title="Branding & design"
               description="We start with your brand, applying strategic insights to build or refine a powerful and cohesive brand identity."

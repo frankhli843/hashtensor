@@ -114,6 +114,8 @@ export const HeroSection: React.FC = () => {
   const block1Ref = React.useRef<HTMLDivElement>(null);
   const block2Ref = React.useRef<HTMLDivElement>(null);
 
+  const contactRef = React.useRef<HTMLDivElement>(null);
+
   React.useEffect(() => {
     if (
       line1Ref.current === null ||
@@ -121,7 +123,8 @@ export const HeroSection: React.FC = () => {
       line3Ref.current === null ||
       line4Ref.current === null ||
       block1Ref.current === null ||
-      block2Ref.current === null
+      block2Ref.current === null ||
+      contactRef.current === null
     )
       return;
 
@@ -188,6 +191,19 @@ export const HeroSection: React.FC = () => {
       "0.6"
     );
 
+    timeline.fromTo(
+      contactRef.current,
+      {
+        autoAlpha: 0,
+        scale: 0,
+      },
+      {
+        scale: 1,
+        autoAlpha: 1,
+        duration: 0.5,
+      },
+      "1.2"
+    );
     timeline.fromTo(
       block1Ref.current,
       {
@@ -258,11 +274,31 @@ export const HeroSection: React.FC = () => {
     >
       <div ref={contentRef}>
         <div
-          className="h-screen w-full flex gap-8 items-center relative mx-auto"
+          className="h-screen w-full flex flex-col  items-center justify-center relative mx-auto"
           style={{
             maxWidth: "1580px",
           }}
         >
+          <div ref={contactRef} className="w-full flex items-center">
+            <div
+              className="p-2 pl-4 bg-white w-full flex justify-between items-center"
+              style={{
+                maxWidth: "472px",
+                borderRadius: "48px",
+                position: "absolute",
+                top: "-8vh",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+              }}
+            >
+              <span className="font-medium">
+                We are now accepting new clients ✨
+              </span>
+              <button className="bg-primary text-white rounded-full py-2 px-4">
+                Contact us
+              </button>
+            </div>
+          </div>
           <div className="w-full flex gap-16 relative mx-auto">
             <div
               className="ml-8"

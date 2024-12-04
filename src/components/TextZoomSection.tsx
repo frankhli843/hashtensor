@@ -12,168 +12,208 @@ export const TextZoomSection: React.FC = () => {
   const section3Ref = React.useRef<HTMLDivElement>(null);
   const section4Ref = React.useRef<HTMLDivElement>(null);
 
+  const zoomTarget1Ref = React.useRef<HTMLSpanElement>(null);
+  const zoomTarget2Ref = React.useRef<HTMLSpanElement>(null);
+  const zoomTarget3Ref = React.useRef<HTMLSpanElement>(null);
+  const zoomTarget4Ref = React.useRef<HTMLSpanElement>(null);
+
   React.useEffect(() => {
-    if (
-      !containerRef.current ||
-      !elementContainerRef.current ||
-      !section1Ref.current ||
-      !section2Ref.current ||
-      !section3Ref.current ||
-      !section4Ref.current
-    )
-      return;
-    gsap.registerPlugin(ScrollTrigger);
+    setTimeout(() => {
+      if (
+        !containerRef.current ||
+        !elementContainerRef.current ||
+        !section1Ref.current ||
+        !section2Ref.current ||
+        !section3Ref.current ||
+        !section4Ref.current ||
+        !zoomTarget1Ref.current ||
+        !zoomTarget2Ref.current ||
+        !zoomTarget3Ref.current ||
+        !zoomTarget4Ref.current
+      )
+        return;
+      gsap.registerPlugin(ScrollTrigger);
 
-    const timeline = gsap.timeline();
+      const timeline = gsap.timeline();
 
-    timeline.fromTo(
-      containerRef.current,
-      {
-        autoAlpha: 0,
-      },
-      {
-        autoAlpha: 1,
-        duration: 0.1,
-      },
-      "0.1"
-    );
+      timeline.fromTo(
+        containerRef.current,
+        {
+          autoAlpha: 0,
+        },
+        {
+          autoAlpha: 1,
+          duration: 0.1,
+        },
+        "0.1"
+      );
 
-    timeline.fromTo(
-      section1Ref.current,
-      {
-        y: "100vh",
-        autoAlpha: 0,
-      },
-      {
-        y: "0vh",
-        autoAlpha: 1,
-      },
-      "0"
-    );
+      const zoomTarget1Rect = zoomTarget1Ref.current!.getBoundingClientRect();
+      const zoomTarget2Rect = zoomTarget2Ref.current!.getBoundingClientRect();
+      const zoomTarget3Rect = zoomTarget3Ref.current!.getBoundingClientRect();
+      const zoomTarget4Rect = zoomTarget4Ref.current!.getBoundingClientRect();
 
-    timeline.fromTo(
-      section1Ref.current,
-      {
-        backgroundPositionY: "0%",
-        "--text-zoom-initial-opacity": "0",
-      },
-      {
-        backgroundPositionY: "100%",
-        "--text-zoom-initial-opacity": "1",
-      },
-      "+=0.10"
-    );
+      const transformOrigin1 = {
+        x: zoomTarget1Rect?.left + zoomTarget1Rect?.width / 2,
+        y: zoomTarget1Rect?.top + zoomTarget1Rect?.height / 2,
+      };
 
-    timeline.fromTo(
-      section1Ref.current,
-      {
-        scale: 1,
-        opacity: 1,
-      },
-      {
-        scale: 40,
-        opacity: 0,
-        // y: "250%",
-        // x: "-575%",
-        ease: "power4.in",
-        delay: 0.2,
-      }
-    );
+      const transformOrigin2 = {
+        x: zoomTarget2Rect?.left + zoomTarget2Rect?.width / 2,
+        y: zoomTarget2Rect?.top + zoomTarget2Rect?.height / 2,
+      };
 
-    timeline.fromTo(
-      section2Ref.current,
-      {
-        scale: 0,
-        opacity: 0,
-      },
-      {
-        scale: 1,
-        opacity: 1,
-      },
-      "-=0.2"
-    );
-    timeline.fromTo(
-      section2Ref.current,
-      {
-        scale: 1,
-        opacity: 1,
-      },
-      {
-        scale: 40,
-        // y: "-120%",
-        // x: "1100%",
-        opacity: 0,
-        ease: "power4.in",
-      }
-    );
+      const transformOrigin3 = {
+        x: zoomTarget3Rect?.left + zoomTarget3Rect?.width / 3,
+        y: zoomTarget3Rect?.top + zoomTarget3Rect?.height / 3,
+      };
 
-    timeline.fromTo(
-      section3Ref.current,
-      {
-        scale: 0,
-        opacity: 0,
-      },
-      {
-        scale: 1,
-        opacity: 1,
-      },
-      "-=0.15"
-    );
-    timeline.fromTo(
-      section3Ref.current,
-      {
-        scale: 1,
-        opacity: 1,
-      },
-      {
-        scale: 40,
-        // y: "-120%",
-        // x: "700%",
-        opacity: 0,
-        ease: "power4.in",
-      }
-    );
+      const transformOrigin4 = {
+        x: zoomTarget4Rect?.left + zoomTarget4Rect?.width / 2,
+        y: zoomTarget4Rect?.top + zoomTarget4Rect?.height / 2,
+      };
 
-    timeline.fromTo(
-      section4Ref.current,
-      {
-        scale: 0,
-        opacity: 0,
-      },
-      {
-        scale: 1,
-        opacity: 1,
-      },
-      "-=0.15"
-    );
-    timeline.fromTo(
-      section4Ref.current,
-      {
-        scale: 1,
-        opacity: 1,
-      },
-      {
-        scale: 40,
-        // y: "-300%",
-        // x: "300%",
-        opacity: 0,
-        ease: "power4.in",
-      }
-    );
+      timeline.fromTo(
+        section1Ref.current,
+        {
+          y: "100vh",
+          autoAlpha: 0,
+        },
+        {
+          y: "0vh",
+          autoAlpha: 1,
+        },
+        "0"
+      );
 
-    const scrollTrigger = ScrollTrigger.create({
-      trigger: containerRef.current,
-      pin: elementContainerRef.current,
-      start: "top top",
-      end: "bottom bottom",
-      animation: timeline,
-      scrub: true,
-      toggleActions: "play none none reverse",
-    });
+      timeline.fromTo(
+        section1Ref.current,
+        {
+          backgroundPositionY: "0%",
+          "--text-zoom-initial-opacity": "0",
+        },
+        {
+          backgroundPositionY: "100%",
+          "--text-zoom-initial-opacity": "1",
+        },
+        "+=0.10"
+      );
 
-    return () => {
-      scrollTrigger.kill();
-    };
+      console.log(transformOrigin1);
+
+      timeline.fromTo(
+        section1Ref.current,
+        {
+          scale: 1,
+          x: 0,
+          y: 0,
+          opacity: 1,
+          transformOrigin: `${transformOrigin1.x}px ${transformOrigin1.y}px`,
+        },
+        {
+          scale: 40,
+          opacity: 0,
+          // y: "250%",
+          // x: "-575%",
+          ease: "power4.in",
+          delay: 0.2,
+        }
+      );
+
+      timeline.fromTo(
+        section2Ref.current,
+        {
+          scale: 0,
+          opacity: 0,
+        },
+        {
+          scale: 1,
+          opacity: 1,
+        },
+        "-=0.2"
+      );
+      timeline.fromTo(
+        section2Ref.current,
+        {
+          scale: 1,
+          opacity: 1,
+          transformOrigin: `${transformOrigin2.x}px ${transformOrigin2.y}px`,
+        },
+        {
+          scale: 40,
+          // y: "-120%",
+          // x: "1100%",
+          opacity: 0,
+          ease: "power4.in",
+        }
+      );
+
+      timeline.fromTo(
+        section3Ref.current,
+        {
+          scale: 0,
+          opacity: 0,
+        },
+        {
+          scale: 1,
+          opacity: 1,
+        },
+        "-=0.15"
+      );
+      timeline.fromTo(
+        section3Ref.current,
+        {
+          scale: 1,
+          opacity: 1,
+          transformOrigin: `${transformOrigin3.x}px ${transformOrigin3.y}px`,
+        },
+        {
+          scale: 40,
+          // y: "-120%",
+          // x: "700%",
+          opacity: 0,
+          ease: "power4.in",
+        }
+      );
+
+      timeline.fromTo(
+        section4Ref.current,
+        {
+          scale: 0,
+          opacity: 0,
+        },
+        {
+          scale: 1,
+          opacity: 1,
+        },
+        "-=0.15"
+      );
+      timeline.fromTo(
+        section4Ref.current,
+        {
+          scale: 1,
+          opacity: 1,
+          transformOrigin: `${transformOrigin4.x}px ${transformOrigin4.y}px`,
+        },
+        {
+          scale: 40,
+          // y: "-300%",
+          // x: "300%",
+          opacity: 0,
+          ease: "power4.in",
+        }
+      );
+
+      ScrollTrigger.create({
+        trigger: containerRef.current,
+        pin: elementContainerRef.current,
+        start: "top top",
+        end: "bottom bottom",
+        animation: timeline,
+        scrub: true,
+        toggleActions: "play none none reverse",
+      });
+    }, 10);
   }, []);
 
   return (
@@ -209,7 +249,8 @@ export const TextZoomSection: React.FC = () => {
             background:
               "linear-gradient(to top, hsl(var(--primary)) 50%, transparent 100%)",
             backgroundSize: "100vw 200vh",
-            mixBlendMode: "multiply",
+            backgroundBlendMode: "screen",
+            // mixBlendMode: "multiply",
           }}
         >
           <div
@@ -226,6 +267,7 @@ export const TextZoomSection: React.FC = () => {
                 }}
               >
                 <span
+                  ref={zoomTarget1Ref}
                   style={{
                     position: "absolute",
                     display: "block",
@@ -261,7 +303,16 @@ export const TextZoomSection: React.FC = () => {
                   Our
                   <br />
                   Strategy is <br />
-                  about <br />
+                  ab
+                  <span
+                    ref={zoomTarget2Ref}
+                    style={{
+                      display: "inline-block",
+                    }}
+                  >
+                    o
+                  </span>
+                  ut <br />
                   Defining the <br />
                   Vision
                 </div>
@@ -287,7 +338,15 @@ export const TextZoomSection: React.FC = () => {
               <h3 className="text-lg flex flex-col gap-8 ">
                 <div className="text-5xl">02/</div>
                 <div className="text-8xl uppercase font-semibold text-primary">
-                  Our
+                  <span
+                    ref={zoomTarget3Ref}
+                    style={{
+                      display: "inline-block",
+                    }}
+                  >
+                    O
+                  </span>
+                  ur
                   <br />
                   Designers <br />
                   Craft the <br />
@@ -319,7 +378,16 @@ export const TextZoomSection: React.FC = () => {
                   Our
                   <br />
                   Engineers <br />
-                  Bring Those <br />
+                  Bring Th
+                  <span
+                    ref={zoomTarget4Ref}
+                    style={{
+                      display: "inline-block",
+                    }}
+                  >
+                    o
+                  </span>
+                  se <br />
                   Ideas to life
                 </div>
               </h3>

@@ -1,5 +1,8 @@
+"use client";
+
 import { CardSlideOverSection } from "@/components/CardSlideOverSection";
 import { CollaborationsSection } from "@/components/CollaborationsSection";
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { TextZoomSection } from "@/components/TextZoomSection";
@@ -7,6 +10,10 @@ import { GRAINY_IMAGE } from "@/lib/various";
 import React from "react";
 
 export default function Home() {
+  React.useEffect(() => {
+    window.scrollTo(0, 0); // values are x,y-offset
+  }, []);
+
   return (
     <div className="relative w-full overflow-x-hidden">
       <div
@@ -34,6 +41,8 @@ export default function Home() {
 
       {/* Clients Section */}
       <CollaborationsSection />
+
+      <Footer />
     </div>
   );
 }
