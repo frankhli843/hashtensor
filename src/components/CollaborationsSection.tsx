@@ -56,7 +56,7 @@ export const CollaborationsSection = () => {
   return (
     <div
       style={{
-        marginTop: "-160vh",
+        marginTop: "-165vh",
         width: "100%",
         height: "200vh",
         overflow: "clip",
