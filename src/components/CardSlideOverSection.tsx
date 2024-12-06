@@ -152,7 +152,7 @@ export const CardSlideOverSection: React.FC = () => {
       ref={containerRef}
       style={{
         minHeight: "600vh",
-        marginTop: "-120vh",
+        marginTop: "-130vh",
         position: "relative",
         overflow: "hidden",
         width: "100%",
