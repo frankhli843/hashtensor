@@ -60,12 +60,12 @@ export const Header: React.FC = () => {
   }, []);
 
   return (
-    <header className="absolute w-screen flex justify-between items-center px-16 py-4 z-50 overflow-hidden">
+    <header className="absolute w-screen flex justify-between items-center px-4 lg:px-16 py-4 z-50 overflow-hidden">
       <div ref={logoRef} style={{ opacity: 0 }}>
         <Logo />
       </div>
       <nav
-        className="flex rounded-full text-lg"
+        className="lg:flex rounded-full text-lg hidden"
         ref={navRef}
         style={{ opacity: 0 }}
       >
@@ -83,7 +83,7 @@ export const Header: React.FC = () => {
         </a>
       </nav>
       <div ref={buttonRef} style={{ opacity: 0 }}>
-        <button className="bg-primary text-white px-16 py-2 rounded-full text-lg">
+        <button className="bg-primary text-white px-4 lg:px-16 py-2 rounded-full xs:text-sm md:text-lg">
           Contact us
         </button>
       </div>

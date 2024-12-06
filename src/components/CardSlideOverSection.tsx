@@ -90,7 +90,7 @@ export const CardSlideOverSection: React.FC = () => {
     timeline.fromTo(
       [scrollSectionRef.current],
       {
-        x: "25%",
+        x: "50%",
       },
       {
         x: "-50%",
@@ -180,10 +180,10 @@ export const CardSlideOverSection: React.FC = () => {
           >
             <div
               ref={titleRef}
-              className="relative w-full flex items-end justify-between p-32"
+              className="relative w-full flex items-end justify-between p-4 py-12 md:p-32"
             >
               <h2
-                className=" text-9xl tracking-widest uppercase font-semibold text-blue-950"
+                className="text-5xl md:text-9xl tracking-widest uppercase font-semibold text-blue-950"
                 style={{
                   backfaceVisibility: "hidden",
                   zIndex: 10,
@@ -193,14 +193,10 @@ export const CardSlideOverSection: React.FC = () => {
                 what we <br />
                 <span>
                   <svg
+                    className="w-[2rem] h-[2rem] ml-[1ch] mr-[0.5rem] mt-[-2.5%] md:w-[6rem] md:h-[6rem] md:mt-[-3.5%]"
                     style={{
-                      marginTop: "-2rem",
-                      marginLeft: "12rem",
-                      marginRight: "2rem",
                       display: "inline-block",
                     }}
-                    width="6rem"
-                    height="6rem"
                     viewBox="0 0 122 122"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -234,7 +230,7 @@ export const CardSlideOverSection: React.FC = () => {
                   alignItems: "top",
                   gap: "4vw",
                   position: "relative",
-                  transform: "translateX(25%)",
+                  transform: "translateX(50%)",
                 }}
               >
                 <div
@@ -265,10 +261,10 @@ export const CardSlideOverSection: React.FC = () => {
                       }}
                     />
                   </div>
-                  <h3 className="text-3xl uppercase font-semibold text-blue-950">
+                  <h3 className="text-2xl md:text-3xl uppercase font-semibold text-blue-950">
                     AI-BASED Web applications
                   </h3>
-                  <p className="text-2xl">
+                  <p className="text-xl md:text-2xl">
                     We specialize in building applications designed specifically
                     for LLM and AI platforms, delivering tailored solutions for
                     your business.
@@ -302,10 +298,10 @@ export const CardSlideOverSection: React.FC = () => {
                       }}
                     />
                   </div>
-                  <h3 className="text-3xl uppercase font-semibold text-blue-950">
+                  <h3 className="text-2xl md:text-3xl uppercase font-semibold text-blue-950">
                     Product Design
                   </h3>
-                  <p className="text-2xl">
+                  <p className="text-xl md:text-2xl">
                     We craft user-centered experiences that prioritize seamless
                     interaction, ensuring your application places users at the
                     heart of every design decision.
@@ -339,10 +335,10 @@ export const CardSlideOverSection: React.FC = () => {
                       }}
                     />
                   </div>
-                  <h3 className="text-3xl uppercase font-semibold text-blue-950">
+                  <h3 className="text-2xl md:text-3xl uppercase font-semibold text-blue-950">
                     web design & development
                   </h3>
-                  <p className="text-2xl">
+                  <p className="text-xl md:text-2xl">
                     Craft digital experiences that blend beauty and ROI,
                     capturing attention and unlocking revenue with every
                     interaction.
@@ -376,10 +372,10 @@ export const CardSlideOverSection: React.FC = () => {
                       }}
                     />
                   </div>
-                  <h3 className="text-3xl uppercase font-semibold text-blue-950">
+                  <h3 className="text-2xl md:text-3xl uppercase font-semibold text-blue-950">
                     BRANDING & GRAPHIC DESIGN
                   </h3>
-                  <p className="text-2xl">
+                  <p className="text-xl md:text-2xl">
                     We start with your brand, applying strategic insights to
                     build or refine a powerful and cohesive brand identity.
                   </p>
@@ -395,7 +391,7 @@ export const CardSlideOverSection: React.FC = () => {
                 opacity: 0,
               }}
             >
-              <h3 className="text-8xl text-blue-950 uppercase font-semibold">
+              <h3 className="text-5xl md:text-8xl text-blue-950 uppercase font-semibold px-4">
                 But wait
                 <br />
                 there&apos;s more...

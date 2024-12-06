@@ -107,28 +107,12 @@ export const CollaborationsSection = () => {
               zIndex: 10,
             }}
           >
-            <h1 className="text-4xl text-white font-light text-center">
+            <h1 className="text-2xl md:text-4xl text-white font-light text-center">
               We Collaborate with the Best
             </h1>
-            <p className="text-white text-7xl uppercase mt-8 font-semibold text-center">
+            <p className="text-white text-4xl md:text-7xl uppercase mt-8 font-semibold text-center">
               partnering with some of the fastest-growing products and startups
             </p>
-            <div className="w-full flex justify-center items-center mt-16">
-              <div
-                className="p-2 pl-4 bg-white w-full flex justify-between items-center"
-                style={{
-                  maxWidth: "472px",
-                  borderRadius: "48px",
-                }}
-              >
-                <span className="font-medium">
-                  Have any questions for us? Let’s talk!
-                </span>
-                <button className="bg-primary text-white rounded-full py-2 px-4">
-                  Schedule a call
-                </button>
-              </div>
-            </div>
           </div>
         </div>
       </div>

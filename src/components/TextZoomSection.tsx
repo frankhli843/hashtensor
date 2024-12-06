@@ -64,8 +64,8 @@ export const TextZoomSection: React.FC = () => {
       };
 
       const transformOrigin3 = {
-        x: zoomTarget3Rect?.left + zoomTarget3Rect?.width / 3,
-        y: zoomTarget3Rect?.top + zoomTarget3Rect?.height / 3,
+        x: zoomTarget3Rect?.left + zoomTarget3Rect?.width / 2,
+        y: zoomTarget3Rect?.top + zoomTarget3Rect?.height / 2,
       };
 
       const transformOrigin4 = {
@@ -258,12 +258,13 @@ export const TextZoomSection: React.FC = () => {
               opacity: "var(--text-zoom-initial-opacity)",
             }}
           >
-            <h2 className="text-9xl uppercase font-bold text-white">
+            <h2 className="text-4xl md:text-9xl uppercase font-bold text-white">
               Transforming <br />
               Concepts int
               <span
                 style={{
                   position: "relative",
+                  display: "inline-block",
                 }}
               >
                 <span
@@ -271,12 +272,12 @@ export const TextZoomSection: React.FC = () => {
                   style={{
                     position: "absolute",
                     display: "block",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -52.5%)",
-                    width: "4.125rem",
-                    height: "4.125rem",
+                    width: "70%",
+                    height: "50%",
+                    top: "20%",
+                    left: "15%",
                     background: "white",
+                    borderRadius: "20px",
                   }}
                 ></span>
                 o
@@ -296,10 +297,10 @@ export const TextZoomSection: React.FC = () => {
           className="absolute w-full h-full flex items-center px-8"
         >
           <div className="container mx-auto flex items-end">
-            <div className="flex gap-4 items-end ">
+            <div className="flex flex-col md:flex-row gap-4 md:items-end">
               <h3 className="text-lg flex flex-col gap-8 ">
-                <div className="text-5xl">01/</div>
-                <div className="text-8xl uppercase font-semibold text-primary">
+                <div className="text-3xl md:text-5xl">01/</div>
+                <div className="text-4xl md:text-8xl uppercase font-semibold text-primary">
                   Our
                   <br />
                   Strategy is <br />
@@ -317,7 +318,7 @@ export const TextZoomSection: React.FC = () => {
                   Vision
                 </div>
               </h3>
-              <p className="ml-12 w-1/3 text-lg">
+              <p className="md:ml-12 md:w-1/3 text-lg">
                 We start by understanding your goals, market, and users. Through
                 research and strategic planning, we build a foundation that
                 aligns with your vision and sets a clear direction.
@@ -334,10 +335,10 @@ export const TextZoomSection: React.FC = () => {
           className="absolute w-full h-full flex items-center px-8"
         >
           <div className="container mx-auto flex items-end">
-            <div className="flex gap-4 items-end ">
+            <div className="flex flex-col md:flex-row gap-4 md:items-end">
               <h3 className="text-lg flex flex-col gap-8 ">
-                <div className="text-5xl">02/</div>
-                <div className="text-8xl uppercase font-semibold text-primary">
+                <div className="text-3xl md:text-5xl">02/</div>
+                <div className="text-4xl md:text-8xl uppercase font-semibold text-primary">
                   <span
                     ref={zoomTarget3Ref}
                     style={{
@@ -354,7 +355,7 @@ export const TextZoomSection: React.FC = () => {
                   experience
                 </div>
               </h3>
-              <p className="ml-12 w-1/3 text-lg">
+              <p className="md:ml-12 md:w-1/3 text-lg">
                 With a user-centered approach, we transform ideas into engaging,
                 functional designs. Every detail is thoughtfully crafted to
                 ensure an intuitive and visually compelling experience.
@@ -371,10 +372,10 @@ export const TextZoomSection: React.FC = () => {
           className="absolute w-full h-full flex items-center px-8"
         >
           <div className="container mx-auto flex items-end">
-            <div className="flex gap-4 items-end ">
+            <div className="flex flex-col md:flex-row gap-4 md:items-end">
               <h3 className="text-lg flex flex-col gap-8 ">
-                <div className="text-5xl">03/</div>
-                <div className="text-8xl uppercase font-semibold text-primary">
+                <div className="text-3xl md:text-5xl">03/</div>
+                <div className="text-4xl md:text-8xl uppercase font-semibold text-primary">
                   Our
                   <br />
                   Engineers <br />
@@ -391,7 +392,7 @@ export const TextZoomSection: React.FC = () => {
                   Ideas to life
                 </div>
               </h3>
-              <p className="ml-12 w-1/3 text-lg">
+              <p className="md:ml-12 md:w-1/3 text-lg">
                 Our skilled engineers turn designs into dynamic digital
                 products, ensuring robust, scalable solutions. We focus on
                 seamless functionality, optimization, and performance.

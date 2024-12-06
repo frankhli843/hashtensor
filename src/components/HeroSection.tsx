@@ -46,9 +46,9 @@ const HighlightText = ({
         style={{
           position: "absolute",
           top: "0.75vw",
-          left: "-16px",
-          maxWidth: "calc(100% + 32px)",
-          height: "6vw",
+          left: "-0.5vw",
+          maxWidth: "calc(100% + 1vw)",
+          height: "min(max(6vw, 3rem), 125px)",
           background: "#B0BDF5",
         }}
       />
@@ -279,27 +279,30 @@ export const HeroSection: React.FC = () => {
             maxWidth: "1580px",
           }}
         >
-          <div ref={contactRef} className="w-full flex items-center">
+          <div
+            ref={contactRef}
+            className="w-full h-screen items-center absolute hidden lg:flex"
+          >
             <div
               className="p-2 pl-4 bg-white w-full flex justify-between items-center"
               style={{
-                maxWidth: "472px",
+                maxWidth: "400px",
                 borderRadius: "48px",
                 position: "absolute",
-                top: "-8vh",
+                top: "15vh",
                 left: "50%",
                 transform: "translate(-50%, -50%)",
               }}
             >
-              <span className="font-medium">
+              <span className="font-medium text-sm lg:text-md">
                 We are now accepting new clients ✨
               </span>
-              <button className="bg-primary text-white rounded-full py-2 px-4">
+              <button className="bg-primary text-white rounded-full py-2 px-4 text-sm lg:text-md">
                 Contact us
               </button>
             </div>
           </div>
-          <div className="w-full flex gap-16 relative mx-auto">
+          <div className="w-full flex flex-col md:flex-row gap-16 relative mx-auto">
             <div
               className="ml-8"
               style={{
@@ -309,7 +312,7 @@ export const HeroSection: React.FC = () => {
               <h1
                 className=" font-normal leading-tight"
                 style={{
-                  fontSize: "6vw",
+                  fontSize: "min(max(6vw, 3rem), 125px)",
                 }}
               >
                 <span
@@ -368,10 +371,14 @@ export const HeroSection: React.FC = () => {
               </h1>
             </div>
             <div
-              className="flex flex-col justify-between"
-              style={{ minHeight: "100%", flex: 1 }}
+              className="flex flex-col justify-between px-8 md:px-0 md:min-h-[100%] gap-8"
+              style={{ flex: 1 }}
             >
-              <p className="text-2xl" ref={block1Ref} style={{ opacity: 0 }}>
+              <p
+                className="text-xl md:text-2xl"
+                ref={block1Ref}
+                style={{ opacity: 0 }}
+              >
                 Hashtensor is a studio that specializes in AI-driven solutions,
                 creating intuitive experiences that connect and inspire.
               </p>
@@ -382,26 +389,26 @@ export const HeroSection: React.FC = () => {
               >
                 <div className="flex gap-14">
                   <div className="flex flex-col ">
-                    <h3 className="text-7xl font-semibold text-primary">
+                    <h3 className="text-6xl md:text-7xl font-semibold text-primary">
                       <Counter target={6} />
                     </h3>
                     <p className="">Years</p>
                   </div>
                   <div className="flex flex-col ">
-                    <h3 className="text-7xl font-semibold text-primary">
+                    <h3 className="text-6xl md:text-7xl font-semibold text-primary">
                       <Counter target={12} />
                     </h3>
                     <p className="">Clients</p>
                   </div>
                   <div className="flex flex-col ">
-                    <h3 className="text-7xl font-semibold text-primary">
+                    <h3 className="text-6xl md:text-7xl font-semibold text-primary">
                       <Counter target={34} />
                     </h3>
                     <p className="">Projects</p>
                   </div>
                 </div>
                 <div className="flex flex-col">
-                  <h2 className="text-7xl font-semibold text-primary">
+                  <h2 className="text-6xl md:text-7xl font-semibold text-primary">
                     $<Counter target={2.1} increment={0.1} />
                     Million
                   </h2>
