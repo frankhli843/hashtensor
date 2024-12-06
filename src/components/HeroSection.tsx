@@ -96,7 +96,7 @@ const Counter = ({
         delay: 2.5,
       }
     );
-  }, [target]);
+  }, [increment, target]);
 
   return <span ref={textRef}>0</span>;
 };
@@ -380,7 +380,9 @@ export const HeroSection: React.FC = () => {
                 style={{ opacity: 0 }}
               >
                 Hashtensor is a studio that specializes in AI-driven solutions,
-                creating intuitive experiences that connect and inspire.
+                creating intuitive experiences that connect and inspire. We
+                focus on working with clients we believe in and projects that
+                make a difference.
               </p>
               <div
                 className="flex flex-col gap-4"
@@ -396,23 +398,30 @@ export const HeroSection: React.FC = () => {
                   </div>
                   <div className="flex flex-col ">
                     <h3 className="text-6xl md:text-7xl font-semibold text-primary">
-                      <Counter target={12} />
+                      <Counter target={8} />
                     </h3>
                     <p className="">Clients</p>
                   </div>
                   <div className="flex flex-col ">
                     <h3 className="text-6xl md:text-7xl font-semibold text-primary">
-                      <Counter target={34} />
+                      <Counter target={14} />
                     </h3>
                     <p className="">Projects</p>
                   </div>
                 </div>
                 <div className="flex flex-col">
                   <h2 className="text-6xl md:text-7xl font-semibold text-primary">
-                    $<Counter target={2.1} increment={0.1} />
+                    <span
+                      style={{
+                        display: "inline-block",
+                        width: "3.4ch",
+                      }}
+                    >
+                      $<Counter target={9.3} increment={0.1} />
+                    </span>
                     Million
                   </h2>
-                  <p className="">In funding</p>
+                  <p className="">In estimated funding for our clients</p>
                 </div>
               </div>
             </div>

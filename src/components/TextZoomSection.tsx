@@ -393,9 +393,10 @@ export const TextZoomSection: React.FC = () => {
                 </div>
               </h3>
               <p className="md:ml-12 md:w-1/3 text-lg">
-                Our skilled engineers turn designs into dynamic digital
-                products, ensuring robust, scalable solutions. We focus on
-                seamless functionality, optimization, and performance.
+                Our skilled engineers with years of FAANG experience turn
+                designs into dynamic digital products, ensuring robust, scalable
+                solutions. We focus on seamless functionality, optimization, and
+                performance.
               </p>
             </div>
           </div>
