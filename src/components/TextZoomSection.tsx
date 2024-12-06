@@ -4,6 +4,8 @@ import React from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
+const TEXT_ZOOM = 100;
+
 export const TextZoomSection: React.FC = () => {
   const section1Ref = React.useRef<HTMLDivElement>(null);
   const section2Ref = React.useRef<HTMLDivElement>(null);
@@ -100,8 +102,6 @@ export const TextZoomSection: React.FC = () => {
         "+=0.10"
       );
 
-      console.log(transformOrigin1);
-
       timeline.fromTo(
         section1Ref.current,
         {
@@ -112,10 +112,7 @@ export const TextZoomSection: React.FC = () => {
           transformOrigin: `${transformOrigin1.x}px ${transformOrigin1.y}px`,
         },
         {
-          scale: 40,
-          opacity: 0,
-          // y: "250%",
-          // x: "-575%",
+          scale: TEXT_ZOOM,
           ease: "power4.in",
           delay: 0.2,
         }
@@ -124,40 +121,47 @@ export const TextZoomSection: React.FC = () => {
       timeline.fromTo(
         section2Ref.current,
         {
+          opacity: 1,
           scale: 0,
-          opacity: 0,
         },
         {
           scale: 1,
-          opacity: 1,
         },
         "-=0.2"
       );
+
+      timeline.fromTo(
+        section1Ref.current,
+        {
+          opacity: 1,
+        },
+        {
+          opacity: 0,
+        },
+        "-=0.6"
+      );
+
       timeline.fromTo(
         section2Ref.current,
         {
           scale: 1,
-          opacity: 1,
           transformOrigin: `${transformOrigin2.x}px ${transformOrigin2.y}px`,
         },
         {
-          scale: 40,
-          // y: "-120%",
-          // x: "1100%",
-          opacity: 0,
+          scale: TEXT_ZOOM,
           ease: "power4.in",
-        }
+        },
+        "-=0.15"
       );
 
       timeline.fromTo(
         section3Ref.current,
         {
+          opacity: 1,
           scale: 0,
-          opacity: 0,
         },
         {
           scale: 1,
-          opacity: 1,
         },
         "-=0.15"
       );
@@ -165,14 +169,12 @@ export const TextZoomSection: React.FC = () => {
         section3Ref.current,
         {
           scale: 1,
-          opacity: 1,
           transformOrigin: `${transformOrigin3.x}px ${transformOrigin3.y}px`,
         },
         {
-          scale: 40,
+          scale: TEXT_ZOOM,
           // y: "-120%",
           // x: "700%",
-          opacity: 0,
           ease: "power4.in",
         }
       );
@@ -180,12 +182,11 @@ export const TextZoomSection: React.FC = () => {
       timeline.fromTo(
         section4Ref.current,
         {
+          opacity: 1,
           scale: 0,
-          opacity: 0,
         },
         {
           scale: 1,
-          opacity: 1,
         },
         "-=0.15"
       );
@@ -197,10 +198,9 @@ export const TextZoomSection: React.FC = () => {
           transformOrigin: `${transformOrigin4.x}px ${transformOrigin4.y}px`,
         },
         {
-          scale: 40,
+          scale: TEXT_ZOOM,
           // y: "-300%",
           // x: "300%",
-          opacity: 0,
           ease: "power4.in",
         }
       );
@@ -277,7 +277,7 @@ export const TextZoomSection: React.FC = () => {
                     height: "50%",
                     top: "20%",
                     left: "15%",
-                    background: "white",
+                    backgroundColor: "white",
                     borderRadius: "20px",
                   }}
                 ></span>
