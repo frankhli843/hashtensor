@@ -60,7 +60,7 @@ export const CardSlideOverSection: React.FC = () => {
       {
         y: "-30vh",
       },
-      "1"
+      "1.2"
     );
 
     timeline.fromTo(
@@ -71,7 +71,7 @@ export const CardSlideOverSection: React.FC = () => {
       {
         opacity: 0,
       },
-      "1.2"
+      "1"
     );
 
     timeline.fromTo(
@@ -183,7 +183,7 @@ export const CardSlideOverSection: React.FC = () => {
               className="relative w-full flex items-end justify-between p-4 py-12 md:p-32"
             >
               <h2
-                className="text-5xl md:text-9xl tracking-widest uppercase font-semibold text-blue-950"
+                className="text-4xl md:text-9xl tracking-widest uppercase font-semibold text-blue-950"
                 style={{
                   backfaceVisibility: "hidden",
                   zIndex: 10,
@@ -248,6 +248,9 @@ export const CardSlideOverSection: React.FC = () => {
                       background: "blue",
                     }}
                   >
+                    <p className="absolute text-white text-3xl md:text-4xl top-4 left-4 z-10 font-semibold">
+                      [ 1 ]
+                    </p>
                     <img
                       src="./whatwedo-1.png"
                       alt="what we do"
@@ -285,6 +288,9 @@ export const CardSlideOverSection: React.FC = () => {
                       background: "blue",
                     }}
                   >
+                    <p className="absolute text-white text-3xl md:text-4xl top-4 left-4 z-10 font-semibold">
+                      [ 2 ]
+                    </p>
                     <img
                       src="./whatwedo-2.png"
                       alt="what we do"
@@ -322,6 +328,9 @@ export const CardSlideOverSection: React.FC = () => {
                       background: "blue",
                     }}
                   >
+                    <p className="absolute text-white text-3xl md:text-4xl top-4 left-4 z-10 font-semibold">
+                      [ 3 ]
+                    </p>
                     <img
                       src="./whatwedo-3.png"
                       alt="what we do"
@@ -359,6 +368,9 @@ export const CardSlideOverSection: React.FC = () => {
                       background: "blue",
                     }}
                   >
+                    <p className="absolute text-white text-3xl md:text-4xl top-4 left-4 z-10 font-semibold">
+                      [ 4 ]
+                    </p>
                     <img
                       src="./whatwedo-4.png"
                       alt="what we do"

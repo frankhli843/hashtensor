@@ -60,7 +60,14 @@ export const Header: React.FC = () => {
   }, []);
 
   return (
-    <header className="absolute w-screen flex justify-between items-center px-4 lg:px-16 py-4 z-50 overflow-hidden">
+    <header
+      className="absolute w-screen flex justify-between items-center px-4 py-4 z-50 overflow-hidden"
+      style={{
+        maxWidth: "1580px",
+        left: "50%",
+        transform: "translateX(-50%)",
+      }}
+    >
       <div ref={logoRef} style={{ opacity: 0 }}>
         <Logo />
       </div>

@@ -274,7 +274,7 @@ export const HeroSection: React.FC = () => {
     >
       <div ref={contentRef}>
         <div
-          className="h-screen w-full flex flex-col  items-center justify-center relative mx-auto"
+          className="h-screen w-full flex flex-col md:items-center md:justify-center relative mx-auto"
           style={{
             maxWidth: "1580px",
           }}
@@ -305,9 +305,9 @@ export const HeroSection: React.FC = () => {
               </a>
             </div>
           </div>
-          <div className="w-full flex flex-col md:flex-row gap-16 pt-32 md:pt-0 relative mx-auto">
+          <div className="w-full flex flex-col md:flex-row gap-16 pt-24 md:pt-0 relative mx-auto">
             <div
-              className="ml-8"
+              className="ml-5"
               style={{
                 width: "fit-content",
               }}
@@ -374,11 +374,11 @@ export const HeroSection: React.FC = () => {
               </h1>
             </div>
             <div
-              className="flex flex-col justify-between px-8 md:px-0 md:min-h-[100%] gap-8"
+              className="flex flex-col justify-between px-5 md:px-0 md:min-h-[100%] gap-8"
               style={{ flex: 1 }}
             >
               <p
-                className="text-xl md:text-2xl"
+                className="text-xl md:text-2xl pr-4"
                 ref={block1Ref}
                 style={{ opacity: 0 }}
               >
@@ -394,26 +394,26 @@ export const HeroSection: React.FC = () => {
               >
                 <div className="flex gap-14">
                   <div className="flex flex-col ">
-                    <h3 className="text-6xl md:text-7xl font-semibold text-primary">
+                    <h3 className="text-5xl md:text-7xl font-semibold text-primary">
                       <Counter target={6} />
                     </h3>
                     <p className="">Years</p>
                   </div>
                   <div className="flex flex-col ">
-                    <h3 className="text-6xl md:text-7xl font-semibold text-primary">
+                    <h3 className="text-5xl md:text-7xl font-semibold text-primary">
                       <Counter target={8} />
                     </h3>
                     <p className="">Clients</p>
                   </div>
                   <div className="flex flex-col ">
-                    <h3 className="text-6xl md:text-7xl font-semibold text-primary">
+                    <h3 className="text-5xl md:text-7xl font-semibold text-primary">
                       <Counter target={14} />
                     </h3>
                     <p className="">Projects</p>
                   </div>
                 </div>
                 <div className="flex flex-col">
-                  <h2 className="text-6xl md:text-7xl font-semibold text-primary">
+                  <h2 className="text-5xl md:text-7xl font-semibold text-primary">
                     <span
                       style={{
                         display: "inline-block",
