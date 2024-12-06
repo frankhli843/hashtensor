@@ -281,7 +281,7 @@ export const HeroSection: React.FC = () => {
         >
           <div
             ref={contactRef}
-            className="w-full h-screen items-center absolute hidden lg:flex"
+            className="w-full h-screen items-center absolute hidden lg:flex opacity-0"
           >
             <div
               className="p-2 pl-4 bg-white w-full flex justify-between items-center"
@@ -297,9 +297,12 @@ export const HeroSection: React.FC = () => {
               <span className="font-medium text-sm lg:text-md">
                 We are now accepting new clients ✨
               </span>
-              <button className="bg-primary text-white rounded-full py-2 px-4 text-sm lg:text-md">
+              <a
+                href="/contact"
+                className="button bg-primary text-white rounded-full py-2 px-4 text-sm lg:text-md"
+              >
                 Contact us
-              </button>
+              </a>
             </div>
           </div>
           <div className="w-full flex flex-col md:flex-row gap-16 pt-32 md:pt-0 relative mx-auto">

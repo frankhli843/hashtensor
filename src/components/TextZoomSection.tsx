@@ -5,8 +5,6 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 export const TextZoomSection: React.FC = () => {
-  const containerRef = React.useRef<HTMLDivElement>(null);
-  const elementContainerRef = React.useRef<HTMLDivElement>(null);
   const section1Ref = React.useRef<HTMLDivElement>(null);
   const section2Ref = React.useRef<HTMLDivElement>(null);
   const section3Ref = React.useRef<HTMLDivElement>(null);
@@ -16,6 +14,9 @@ export const TextZoomSection: React.FC = () => {
   const zoomTarget2Ref = React.useRef<HTMLSpanElement>(null);
   const zoomTarget3Ref = React.useRef<HTMLSpanElement>(null);
   const zoomTarget4Ref = React.useRef<HTMLSpanElement>(null);
+
+  const containerRef = React.useRef<HTMLDivElement>(null);
+  const elementContainerRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
     setTimeout(() => {

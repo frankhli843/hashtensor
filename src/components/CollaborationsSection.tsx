@@ -63,7 +63,7 @@ export const CollaborationsSection = () => {
   React.useEffect(() => {
     InitializeThreeJS(canvasRef, waveModel, renderer2, camera2);
     BuildAnimation(waveModel, containerRef, contentRef, backdropRef, textRef);
-  }, []);
+  }, [width, height]);
 
   return (
     <div

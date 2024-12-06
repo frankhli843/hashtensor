@@ -83,9 +83,12 @@ export const Header: React.FC = () => {
         </a>
       </nav>
       <div ref={buttonRef} style={{ opacity: 0 }}>
-        <button className="bg-primary text-white px-4 lg:px-16 py-2 rounded-full xs:text-sm md:text-lg">
+        <a
+          href="/contact"
+          className="button bg-primary text-white px-4 lg:px-16 py-2 rounded-full xs:text-sm md:text-lg"
+        >
           Contact us
-        </button>
+        </a>
       </div>
     </header>
   );
