@@ -302,7 +302,7 @@ export const HeroSection: React.FC = () => {
               </button>
             </div>
           </div>
-          <div className="w-full flex flex-col md:flex-row gap-16 relative mx-auto">
+          <div className="w-full flex flex-col md:flex-row gap-16 pt-32 md:pt-0 relative mx-auto">
             <div
               className="ml-8"
               style={{
