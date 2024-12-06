@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 /* eslint-disable @typescript-eslint/ban-ts-comment */
@@ -6,6 +7,17 @@ import React from "react";
 import gsap from "gsap";
 import useWindowSize from "@/lib/useWindowSize";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+
+interface ScrollImageProps {
+  src: string;
+}
+const ScrollImage: React.FC<ScrollImageProps> = ({ src }) => {
+  return (
+    <div>
+      <img src={src} height={64} alt="" role="presentation" />
+    </div>
+  );
+};
 
 export const CollaborationsSection = () => {
   const waveModel = React.useRef<THREE.Mesh>(
@@ -102,17 +114,46 @@ export const CollaborationsSection = () => {
           />
           <div
             ref={textRef}
-            className="container"
             style={{
+              width: "100%",
               zIndex: 10,
             }}
           >
-            <h1 className="text-2xl md:text-4xl text-white font-light text-center">
+            <h1 className="text-2xl md:text-4xl text-white font-light text-center container">
               We Collaborate with the Best
             </h1>
-            <p className="text-white text-4xl md:text-7xl uppercase mt-8 font-semibold text-center">
+            <p className="text-white text-4xl md:text-7xl uppercase mt-8 font-semibold text-center container">
               partnering with some of the fastest-growing products and startups
             </p>
+            <div className="relative w-full overflow-clip z-10 m-0 p-0 mt-16">
+              <div
+                style={{
+                  overflow: "hidden",
+                  height: "100%",
+                  whiteSpace: "nowrap",
+                  margin: "0",
+                  padding: "0",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  gap: "64px",
+                  width: "calc(3905.59px * 1.5)",
+                  animation: "scrollLogos 30s infinite linear",
+                }}
+              >
+                <ScrollImage src="./hashmatrix-logo.svg" />
+                <ScrollImage src="./hashmatrix-logo.svg" />
+                <ScrollImage src="./hashmatrix-logo.svg" />
+                <ScrollImage src="./hashmatrix-logo.svg" />
+                <ScrollImage src="./hashmatrix-logo.svg" />
+                <ScrollImage src="./hashmatrix-logo.svg" />
+                <ScrollImage src="./hashmatrix-logo.svg" />
+                <ScrollImage src="./hashmatrix-logo.svg" />
+                <ScrollImage src="./hashmatrix-logo.svg" />
+                <ScrollImage src="./hashmatrix-logo.svg" />
+                <ScrollImage src="./hashmatrix-logo.svg" />
+              </div>
+            </div>
           </div>
         </div>
       </div>

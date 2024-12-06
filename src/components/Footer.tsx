@@ -31,23 +31,7 @@ export const Footer: React.FC = () => {
         style={{
           flex: 1,
         }}
-      >
-        <p className="text-lg text-white">Offices</p>
-        <div className="flex flex-col gap-2">
-          <p className="text-lg text-white">
-            <span className="font-medium">New York:</span> 26 Broadway 8th
-            floor, NY 10004, USA
-          </p>
-          <p className="text-lg text-white">
-            <span className="font-medium">San Francisco:</span> 532 Natoma St,
-            CA 94103, USA{" "}
-          </p>
-          <p className="text-lg text-white">
-            <span className="font-medium">Vancouver:</span> 13571 Commerce Pkwy,
-            BC V6V2Z8, CA{" "}
-          </p>
-        </div>
-      </div>
+      ></div>
     </footer>
   );
 };

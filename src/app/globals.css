@@ -16,6 +16,15 @@ body::after {
     url("/background-gradient-3.png");
 }
 
+@keyframes scrollLogos {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(calc((-3905.59px * 0.5) - 32px));
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
