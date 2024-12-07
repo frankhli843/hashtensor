@@ -259,7 +259,14 @@ export const TextZoomSection: React.FC = () => {
               opacity: "var(--text-zoom-initial-opacity)",
             }}
           >
-            <h2 className="text-4xl md:text-9xl uppercase font-bold text-white">
+            <h2
+              className="text-4xl md:text-9xl uppercase font-bold text-white"
+              style={{
+                WebkitFontSmoothing: "subpixel-antialiased",
+                transform: "translateZ(0)",
+                backfaceVisibility: "hidden",
+              }}
+            >
               Transforming <br />
               Concepts int
               <span
@@ -301,7 +308,14 @@ export const TextZoomSection: React.FC = () => {
             <div className="flex flex-col md:flex-row gap-4 md:items-end">
               <h3 className="text-lg flex flex-col gap-8 ">
                 <div className="text-3xl md:text-5xl">01/</div>
-                <div className="text-4xl md:text-8xl uppercase font-semibold text-primary">
+                <div
+                  className="text-4xl md:text-8xl uppercase font-semibold text-primary"
+                  style={{
+                    WebkitFontSmoothing: "subpixel-antialiased",
+                    transform: "translateZ(0)",
+                    backfaceVisibility: "hidden",
+                  }}
+                >
                   Our
                   <br />
                   Strategy is <br />
@@ -339,7 +353,14 @@ export const TextZoomSection: React.FC = () => {
             <div className="flex flex-col md:flex-row gap-4 md:items-end">
               <h3 className="text-lg flex flex-col gap-8 ">
                 <div className="text-3xl md:text-5xl">02/</div>
-                <div className="text-4xl md:text-8xl uppercase font-semibold text-primary">
+                <div
+                  className="text-4xl md:text-8xl uppercase font-semibold text-primary"
+                  style={{
+                    WebkitFontSmoothing: "subpixel-antialiased",
+                    transform: "translateZ(0)",
+                    backfaceVisibility: "hidden",
+                  }}
+                >
                   <span
                     ref={zoomTarget3Ref}
                     style={{
@@ -376,7 +397,14 @@ export const TextZoomSection: React.FC = () => {
             <div className="flex flex-col md:flex-row gap-4 md:items-end">
               <h3 className="text-lg flex flex-col gap-8 ">
                 <div className="text-3xl md:text-5xl">03/</div>
-                <div className="text-4xl md:text-8xl uppercase font-semibold text-primary">
+                <div
+                  className="text-4xl md:text-8xl uppercase font-semibold text-primary"
+                  style={{
+                    WebkitFontSmoothing: "subpixel-antialiased",
+                    transform: "translateZ(0)",
+                    backfaceVisibility: "hidden",
+                  }}
+                >
                   Our
                   <br />
                   Engineers <br />
