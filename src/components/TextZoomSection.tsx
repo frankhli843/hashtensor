@@ -273,6 +273,10 @@ export const TextZoomSection: React.FC = () => {
                 style={{
                   position: "relative",
                   display: "inline-block",
+                  WebkitFontSmoothing: "subpixel-antialiased",
+                  transform: "translateZ(0)",
+                  backfaceVisibility: "hidden",
+                  textRendering: "optimizeLegibility",
                 }}
               >
                 <span
@@ -314,6 +318,7 @@ export const TextZoomSection: React.FC = () => {
                     WebkitFontSmoothing: "subpixel-antialiased",
                     transform: "translateZ(0)",
                     backfaceVisibility: "hidden",
+                    textRendering: "optimizeLegibility",
                   }}
                 >
                   Our
@@ -359,6 +364,7 @@ export const TextZoomSection: React.FC = () => {
                     WebkitFontSmoothing: "subpixel-antialiased",
                     transform: "translateZ(0)",
                     backfaceVisibility: "hidden",
+                    textRendering: "optimizeLegibility",
                   }}
                 >
                   <span
@@ -403,6 +409,7 @@ export const TextZoomSection: React.FC = () => {
                     WebkitFontSmoothing: "subpixel-antialiased",
                     transform: "translateZ(0)",
                     backfaceVisibility: "hidden",
+                    textRendering: "optimizeLegibility",
                   }}
                 >
                   Our
