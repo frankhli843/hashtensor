@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased light`}
+        className={`light`}
         style={{
           width: "100%",
           maxWidth: "100vw",
