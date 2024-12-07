@@ -36,7 +36,7 @@ export default function Contact() {
       <Header />
       <div className="flex flex-col lg:flex-row gap-24 py-24 container">
         <div style={{ flex: 1 }}>
-          <h1 className="text-primary text-7xl font-semibold">
+          <h1 className="text-primary text-5xl lg:text-7xl font-semibold">
             Let’s create something memorable
           </h1>
           <p className="text-2xl mt-4">
@@ -47,7 +47,9 @@ export default function Contact() {
           </p>
           <div className="mt-10 flex flex-col gap-2 rounded-3xl border p-8 border-primary">
             <h2 className="text-3xl">Email</h2>
-            <p className="text-4xl text-blue-950">wsfccorp@gmail.com</p>
+            <p className="text-xl lg:text-4xl text-blue-950">
+              wsfccorp@gmail.com
+            </p>
           </div>
         </div>
         <div style={{ flex: 1 }}>
