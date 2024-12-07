@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@material-tailwind/react": "^2.1.10",
     "@types/gsap": "^1.20.2",
     "@types/nodemailer": "^6.4.17",
     "@types/three": "^0.170.0",

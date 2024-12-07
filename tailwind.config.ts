@@ -1,6 +1,6 @@
-import type { Config } from "tailwindcss";
+import withMT from "@material-tailwind/react/utils/withMT";
 
-export default {
+module.exports = withMT({
   darkMode: ["class"],
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -69,5 +69,6 @@ export default {
       },
     },
   },
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+});

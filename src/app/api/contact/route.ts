@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-// import { NextRequest, NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 import nodemailer from "nodemailer";
 
-export async function POST() {
+export async function POST(req: NextRequest) {
   console.log("POST :: /api/contact");
 
   const transporter = nodemailer.createTransport({
@@ -26,12 +26,20 @@ export async function POST() {
     clientSecret: process.env.OAUTH_CLIENT_SECRET,
     refreshToken: process.env.OAUTH_REFRESH_TOKEN,
   });
+  const { name, email, budget, message, tags } = await req.json();
 
   const mailOptions = {
     from: "hashtensorautomailer@gmail.com",
-    to: "henrikheywork@gmail.com",
-    subject: "Nodemailer Project",
+    to: "wsfccorp@gmail.com",
+    subject: "HashTensor Contact Form",
     text: "Hi from your nodemailer project",
+    html: `
+    <p>You got mail!</p>
+    <p>Name: ${name}</p>
+    <p>Email: ${email}</p>
+    <p>Budget: ${budget}</p>
+    <p>Message: ${message}</p>
+    <p>Tags: ${tags.join(", ")}</p>`,
   };
 
   transporter.sendMail(mailOptions, function (err, data) {
