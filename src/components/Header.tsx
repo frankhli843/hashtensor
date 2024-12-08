@@ -3,6 +3,7 @@
 import React from "react";
 import { Logo } from "./Logo";
 import gsap from "gsap";
+import Link from "next/link";
 
 export const Header: React.FC = () => {
   const logoRef = React.useRef<HTMLDivElement>(null);
@@ -69,9 +70,9 @@ export const Header: React.FC = () => {
       }}
     >
       <div ref={logoRef} style={{ opacity: 0 }}>
-        <a href="">
+        <Link href="/">
           <Logo />
-        </a>
+        </Link>
       </div>
       <nav
         className="lg:flex rounded-full text-lg hidden"
