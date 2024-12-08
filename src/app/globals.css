@@ -26,6 +26,10 @@ body::after {
   }
 }
 
+.text-blue-950 {
+  color: #0c1c5a;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

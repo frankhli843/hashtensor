@@ -382,10 +382,10 @@ export const HeroSection: React.FC = () => {
                 ref={block1Ref}
                 style={{ opacity: 0 }}
               >
-                Hashtensor is a studio that specializes in AI-driven solutions,
-                creating intuitive experiences that connect and inspire. We
-                focus on working with clients we believe in and projects that
-                make a difference.
+                Combining creativity and AI, we build innovative solutions
+                powered by top-tier engineers, designers, and product owners.
+                Our work spans industries, creating scalable, impactful products
+                that solve complex challenges.
               </p>
               <div
                 className="flex flex-col gap-4"
@@ -395,7 +395,7 @@ export const HeroSection: React.FC = () => {
                 <div className="flex gap-14">
                   <div className="flex flex-col ">
                     <h3 className="text-5xl md:text-7xl font-semibold text-primary">
-                      <Counter target={6} />
+                      <Counter target={4} />
                     </h3>
                     <p className="">Years</p>
                   </div>
@@ -417,14 +417,14 @@ export const HeroSection: React.FC = () => {
                     <span
                       style={{
                         display: "inline-block",
-                        width: "3.4ch",
+                        width: "3.2ch",
                       }}
                     >
                       $<Counter target={9.3} increment={0.1} />
                     </span>
-                    Million
+                    + Million
                   </h2>
-                  <p className="">In estimated funding for our clients</p>
+                  <p className="">In funding for our clients</p>
                 </div>
               </div>
             </div>

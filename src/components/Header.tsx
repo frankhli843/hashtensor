@@ -69,7 +69,9 @@ export const Header: React.FC = () => {
       }}
     >
       <div ref={logoRef} style={{ opacity: 0 }}>
-        <Logo />
+        <a href="">
+          <Logo />
+        </a>
       </div>
       <nav
         className="lg:flex rounded-full text-lg hidden"

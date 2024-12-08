@@ -265,12 +265,12 @@ export const CardSlideOverSection: React.FC = () => {
                     />
                   </div>
                   <h3 className="text-2xl md:text-3xl uppercase font-semibold text-blue-950">
-                    AI-BASED Web applications
+                    AI-BASED applications
                   </h3>
                   <p className="text-xl md:text-2xl">
-                    We specialize in building applications designed specifically
-                    for LLM and AI platforms, delivering tailored solutions for
-                    your business.
+                    We create AI-driven applications tailored to industry needs,
+                    leveraging the expertise of FAANG-level engineers to deliver
+                    scalable, accessible solutions.
                   </p>
                 </div>
                 <div
@@ -308,9 +308,9 @@ export const CardSlideOverSection: React.FC = () => {
                     Product Design
                   </h3>
                   <p className="text-xl md:text-2xl">
-                    We craft user-centered experiences that prioritize seamless
-                    interaction, ensuring your application places users at the
-                    heart of every design decision.
+                    Our designers craft user-centered experiences with a focus
+                    on scalability and innovation. Backed by FAANG-level talent,
+                    we ensure every design meets the highest industry standards.
                   </p>
                 </div>
                 <div
@@ -345,12 +345,12 @@ export const CardSlideOverSection: React.FC = () => {
                     />
                   </div>
                   <h3 className="text-2xl md:text-3xl uppercase font-semibold text-blue-950">
-                    web design & development
+                    design & development
                   </h3>
                   <p className="text-xl md:text-2xl">
-                    Craft digital experiences that blend beauty and ROI,
-                    capturing attention and unlocking revenue with every
-                    interaction.
+                    We build scalable, AI-powered applications with seamless
+                    performance. Our FAANG-experienced developers deliver
+                    solutions that drive engagement and ROI.
                   </p>
                 </div>
                 <div
@@ -388,8 +388,9 @@ export const CardSlideOverSection: React.FC = () => {
                     BRANDING & GRAPHIC DESIGN
                   </h3>
                   <p className="text-xl md:text-2xl">
-                    We start with your brand, applying strategic insights to
-                    build or refine a powerful and cohesive brand identity.
+                    We shape impactful brand identities with strategic insights
+                    and bold visuals. Our team’s expertise, including
+                    FAANG-level design talent, ensures your brand stands out.
                   </p>
                 </div>
               </div>

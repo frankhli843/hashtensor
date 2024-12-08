@@ -268,7 +268,7 @@ export const TextZoomSection: React.FC = () => {
               }}
             >
               Transforming <br />
-              Concepts int
+              Ideas int
               <span
                 style={{
                   position: "relative",
@@ -295,8 +295,9 @@ export const TextZoomSection: React.FC = () => {
                 o
               </span>{" "}
               <br />
-              Seamless Digital <br />
-              Products
+              AI Powered <br />
+              Scalable Digital <br />
+              Solutions.
             </h2>
           </div>
         </div>
@@ -339,9 +340,9 @@ export const TextZoomSection: React.FC = () => {
                 </div>
               </h3>
               <p className="md:ml-12 md:w-1/3 text-lg">
-                We start by understanding your goals, market, and users. Through
-                research and strategic planning, we build a foundation that
-                aligns with your vision and sets a clear direction.
+                By understanding your goals, users, and market, we use AI-driven
+                insights and strategic planning to build a foundation aligned
+                with your objectives.
               </p>
             </div>
           </div>
@@ -378,15 +379,16 @@ export const TextZoomSection: React.FC = () => {
                   ur
                   <br />
                   Designers <br />
-                  Craft the <br />
-                  right <br />
-                  experience
+                  Create <br />
+                  Intuitive, <br />
+                  AI-Enhanced <br />
+                  experiences
                 </div>
               </h3>
               <p className="md:ml-12 md:w-1/3 text-lg">
-                With a user-centered approach, we transform ideas into engaging,
-                functional designs. Every detail is thoughtfully crafted to
-                ensure an intuitive and visually compelling experience.
+                With a user-centered approach, we transform ideas into
+                functional, engaging designs, ensuring every detail resonates
+                with users and industries.
               </p>
             </div>
           </div>
@@ -429,10 +431,9 @@ export const TextZoomSection: React.FC = () => {
                 </div>
               </h3>
               <p className="md:ml-12 md:w-1/3 text-lg">
-                Our skilled engineers with years of FAANG experience turn
-                designs into dynamic digital products, ensuring robust, scalable
-                solutions. We focus on seamless functionality, optimization, and
-                performance.
+                Leveraging automation and engineering expertise, we turn designs
+                into robust, scalable applications with seamless performance and
+                adaptability.
               </p>
             </div>
           </div>
