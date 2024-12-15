@@ -8,16 +8,16 @@ import gsap from "gsap";
 import useWindowSize from "@/lib/useWindowSize";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
-interface ScrollImageProps {
-  src: string;
-}
-const ScrollImage: React.FC<ScrollImageProps> = ({ src }) => {
-  return (
-    <div>
-      <img src={src} height={64} alt="" role="presentation" />
-    </div>
-  );
-};
+// interface ScrollImageProps {
+//   src: string;
+// }
+// const ScrollImage: React.FC<ScrollImageProps> = ({ src }) => {
+//   return (
+//     <div>
+//       <img src={src} height={64} alt="" role="presentation" />
+//     </div>
+//   );
+// };
 
 export const CollaborationsSection = () => {
   const waveModel = React.useRef<THREE.Mesh>(
@@ -125,7 +125,7 @@ export const CollaborationsSection = () => {
             <p className="text-white text-4xl md:text-7xl uppercase mt-8 font-semibold text-center container">
               partnering with some of the fastest-growing products and startups
             </p>
-            <div className="relative w-full overflow-clip z-10 m-0 p-0 mt-16">
+            {/* <div className="relative w-full overflow-clip z-10 m-0 p-0 mt-16">
               <div
                 style={{
                   overflow: "hidden",
@@ -153,7 +153,7 @@ export const CollaborationsSection = () => {
                 <ScrollImage src="./hashmatrix-logo.svg" />
                 <ScrollImage src="./hashmatrix-logo.svg" />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
