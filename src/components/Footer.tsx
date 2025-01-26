@@ -7,6 +7,8 @@ export const Footer: React.FC = () => {
       className="w-screen p-8 md:p-8 flex flex-col md:flex-row gap-24"
       style={{
         backgroundColor: "#0D1E60 ",
+        position: "relative",
+        zIndex: 1,
       }}
     >
       <div
