@@ -7,7 +7,6 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { TextZoomSection } from "@/components/TextZoomSection";
-import { GRAINY_IMAGE } from "@/lib/various";
 import React from "react";
 
 export default function Home() {

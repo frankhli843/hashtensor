@@ -1,6 +1,5 @@
 "use client";
 
-import { ContactForm } from "@/components/ContactForm";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { GRAINY_IMAGE } from "@/lib/various";
