@@ -52,9 +52,7 @@ export default function Contact() {
             </p>
           </div>
         </div>
-        <div style={{ flex: 1 }}>
-          <ContactForm />
-        </div>
+        <div style={{ flex: 1 }}>{/* <ContactForm /> */}</div>
       </div>
       <Footer />
     </div>

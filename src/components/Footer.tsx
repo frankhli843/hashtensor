@@ -4,7 +4,7 @@ import { Logo } from "./Logo";
 export const Footer: React.FC = () => {
   return (
     <footer
-      className="w-screen p-8 md:p-48 flex flex-col md:flex-row gap-24"
+      className="w-screen p-8 md:p-8 flex flex-col md:flex-row gap-24"
       style={{
         backgroundColor: "#0D1E60 ",
       }}

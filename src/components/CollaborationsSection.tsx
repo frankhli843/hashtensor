@@ -8,16 +8,32 @@ import gsap from "gsap";
 import useWindowSize from "@/lib/useWindowSize";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
-// interface ScrollImageProps {
-//   src: string;
-// }
-// const ScrollImage: React.FC<ScrollImageProps> = ({ src }) => {
-//   return (
-//     <div>
-//       <img src={src} height={64} alt="" role="presentation" />
-//     </div>
-//   );
-// };
+interface ScrollImageProps {
+  src: string;
+}
+const ScrollImage: React.FC<ScrollImageProps> = ({ src }) => {
+  return (
+    <div
+      style={{
+        height: "64px",
+      }}
+    >
+      <img
+        src={src}
+        height="64px"
+        style={{
+          objectFit: "contain",
+          minHeight: "64px",
+          maxHeight: "64px",
+          minWidth: "350px",
+          maxWidth: "350px",
+        }}
+        alt=""
+        role="presentation"
+      />
+    </div>
+  );
+};
 
 export const CollaborationsSection = () => {
   const waveModel = React.useRef<THREE.Mesh>(
@@ -125,7 +141,7 @@ export const CollaborationsSection = () => {
             <p className="text-white text-4xl md:text-7xl uppercase mt-8 font-semibold text-center container">
               partnering with some of the fastest-growing products and startups
             </p>
-            {/* <div className="relative w-full overflow-clip z-10 m-0 p-0 mt-16">
+            <div className="relative w-full overflow-clip z-10 m-0 p-0 mt-16">
               <div
                 style={{
                   overflow: "hidden",
@@ -136,24 +152,25 @@ export const CollaborationsSection = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  gap: "64px",
-                  width: "calc(3905.59px * 1.5)",
+                  gap: "16px",
+                  width: "calc(3905.59px * 1)",
                   animation: "scrollLogos 30s infinite linear",
                 }}
               >
                 <ScrollImage src="./hashmatrix-logo.svg" />
+                <ScrollImage src="./homezai.svg" />
+                <ScrollImage src="./pageon.svg" />
                 <ScrollImage src="./hashmatrix-logo.svg" />
+                <ScrollImage src="./homezai.svg" />
+                <ScrollImage src="./pageon.svg" />
                 <ScrollImage src="./hashmatrix-logo.svg" />
+                <ScrollImage src="./homezai.svg" />
+                <ScrollImage src="./pageon.svg" />
                 <ScrollImage src="./hashmatrix-logo.svg" />
-                <ScrollImage src="./hashmatrix-logo.svg" />
-                <ScrollImage src="./hashmatrix-logo.svg" />
-                <ScrollImage src="./hashmatrix-logo.svg" />
-                <ScrollImage src="./hashmatrix-logo.svg" />
-                <ScrollImage src="./hashmatrix-logo.svg" />
-                <ScrollImage src="./hashmatrix-logo.svg" />
-                <ScrollImage src="./hashmatrix-logo.svg" />
+                <ScrollImage src="./homezai.svg" />
+                <ScrollImage src="./pageon.svg" />
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
