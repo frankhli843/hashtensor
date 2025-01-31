@@ -46,9 +46,12 @@ export default function Contact() {
           </p>
           <div className="mt-10 flex flex-col gap-2 rounded-3xl border p-8 border-primary">
             <h2 className="text-3xl">Email</h2>
-            <p className="text-xl lg:text-4xl text-blue-950">
-              wsfccorp@gmail.com
-            </p>
+            <a
+              className="text-xl lg:text-4xl text-blue-950"
+              href="mailto:hashtensor@gmail.com"
+            >
+              hashtensor@gmail.com
+            </a>
           </div>
         </div>
         <div style={{ flex: 1 }}>{/* <ContactForm /> */}</div>
