@@ -25,8 +25,6 @@ const ScrollImage: React.FC<ScrollImageProps> = ({ src }) => {
           objectFit: "contain",
           minHeight: "64px",
           maxHeight: "64px",
-          minWidth: "350px",
-          maxWidth: "350px",
         }}
         alt=""
         role="presentation"
@@ -152,7 +150,7 @@ export const CollaborationsSection = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  gap: "16px",
+                  gap: "64px",
                   width: "calc(3905.59px * 1)",
                   animation: "scrollLogos 30s infinite linear",
                 }}
@@ -160,15 +158,19 @@ export const CollaborationsSection = () => {
                 <ScrollImage src="./hashmatrix-logo.svg" />
                 <ScrollImage src="./homezai.svg" />
                 <ScrollImage src="./pageon.svg" />
+                <ScrollImage src="./sharpstakes.png" />
                 <ScrollImage src="./hashmatrix-logo.svg" />
                 <ScrollImage src="./homezai.svg" />
                 <ScrollImage src="./pageon.svg" />
+                <ScrollImage src="./sharpstakes.png" />
                 <ScrollImage src="./hashmatrix-logo.svg" />
                 <ScrollImage src="./homezai.svg" />
                 <ScrollImage src="./pageon.svg" />
+                <ScrollImage src="./sharpstakes.png" />
                 <ScrollImage src="./hashmatrix-logo.svg" />
                 <ScrollImage src="./homezai.svg" />
                 <ScrollImage src="./pageon.svg" />
+                <ScrollImage src="./sharpstakes.png" />
               </div>
             </div>
           </div>
