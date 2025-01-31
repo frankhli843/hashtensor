@@ -285,7 +285,7 @@ export const TextZoomSection: React.FC = () => {
                     position: "absolute",
                     display: "block",
                     width: "70%",
-                    height: "50%",
+                    height: "55%",
                     top: "20%",
                     left: "15%",
                     backgroundColor: "white",
